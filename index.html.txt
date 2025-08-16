@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Просветление — Дмитрий Сергеевич Кон</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Шапка -->
+  <header class="header">
+    <div class="logo">🌿 Просветление</div>
+    <nav class="nav">
+      <a href="#home" data-lang="ru">Главная</a>
+      <a href="#about" data-lang="ru">Обо мне</a>
+      <a href="#contact" data-lang="ru">Контакты</a>
+      <button id="lang-toggle">EN</button>
+    </nav>
+  </header>
+
+  <!-- Главная -->
+  <section id="home" class="hero">
+    <h1 data-ru="Главное растение на планете — Каннабис"
+        data-en="The most important plant on Earth — Cannabis">
+      Главное растение на планете — Каннабис
+    </h1>
+    <p data-ru="Каннабис помогает раскрыть внутренний мир, обрести гармонию и новые возможности."
+       data-en="Cannabis helps to unlock the inner self, find harmony and new opportunities.">
+      Каннабис помогает раскрыть внутренний мир, обрести гармонию и новые возможности.
+    </p>
+  </section>
+
+  <!-- Обо мне -->
+  <section id="about" class="about">
+    <h2 data-ru="Обо мне" data-en="About me">Обо мне</h2>
+    <div class="about-content">
+      <img src="https://www.dropbox.com/scl/fi/z99jl0xcskcgsa106373p/378978856_1284674769125618_2513081647539716365_n.jpg?raw=1"
+           alt="Дмитрий Сергеевич Кон">
+      <div>
+        <p data-ru="Меня зовут Дмитрий Сергеевич Кон. Я специалист в духовных и физических практиках, связанных с каннабисом."
+           data-en="My name is Dmitriy Sergeevich Kon. I specialize in spiritual and physical practices connected with cannabis.">
+          Меня зовут Дмитрий Сергеевич Кон. Я специалист в духовных и физических практиках, связанных с каннабисом.
+        </p>
+        <p data-ru="Моя цель — помочь людям познать себя и открыть новые возможности через осознанное взаимодействие с этим растением."
+           data-en="My mission is to help people discover themselves and unlock new possibilities through conscious connection with this plant.">
+          Моя цель — помочь людям познать себя и открыть новые возможности через осознанное взаимодействие с этим растением.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact" class="contact">
+    <h2 data-ru="Контакты" data-en="Contacts">Контакты</h2>
+    <p>
+      📧 <a href="mailto:dimakon1221@gmail.com">dimakon1221@gmail.com</a><br>
+      🚀 <a href="https://t.me/DmitriyOfficialchannel" target="_blank">Telegram: @DmitriyOfficialchannel</a>
+    </p>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <p>© 2025 Дмитрий Сергеевич Кон — Просветление</p>
+  </footer>
+
+  <!-- Анимация листьев -->
+  <div class="leaves">
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+  </div>
+</body>
+</html>
