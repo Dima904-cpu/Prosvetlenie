@@ -8,3 +8,4 @@ document.getElementById("lang-toggle").addEventListener("click", () => {
     el.textContent = isRU ? el.dataset.en : el.dataset.ru;
   });
 });
+
