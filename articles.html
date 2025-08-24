@@ -100,23 +100,19 @@
       z-index: 2;
     }
 
-    /* Плавающие символы мандалы */
+    /* Плавающие символы */
     .spiritual-symbol {
       position: absolute;
-      font-size: 40px;
-      opacity: 0.2;
-      animation: float 20s infinite linear;
+      font-size: 32px;
+      opacity: 0.15;
+      animation: float 25s infinite linear;
       z-index: 1;
+      user-select: none;
     }
-
-    .symbol1 { top: 10%; left: 5%; animation-delay: 0s; }
-    .symbol2 { top: 30%; right: 10%; animation-delay: 5s; }
-    .symbol3 { bottom: 20%; left: 15%; animation-delay: 10s; }
-    .symbol4 { bottom: 15%; right: 20%; animation-delay: 15s; }
 
     @keyframes float {
       0% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(180deg); }
+      50% { transform: translateY(-30px) rotate(180deg); }
       100% { transform: translateY(0) rotate(360deg); }
     }
 
@@ -127,11 +123,20 @@
   </style>
 </head>
 <body>
-  <!-- Декоративные духовные символы -->
-  <div class="spiritual-symbol symbol1">☯</div>
-  <div class="spiritual-symbol symbol2">✧</div>
-  <div class="spiritual-symbol symbol3">ॐ</div>
-  <div class="spiritual-symbol symbol4">✿</div>
+  <!-- Очень много символов по бокам -->
+  <div class="spiritual-symbol" style="top:10%; left:3%;">☯</div>
+  <div class="spiritual-symbol" style="top:20%; left:8%;">ॐ</div>
+  <div class="spiritual-symbol" style="top:35%; left:5%;">✿</div>
+  <div class="spiritual-symbol" style="top:50%; left:2%;">✧</div>
+  <div class="spiritual-symbol" style="top:70%; left:6%;">⚛</div>
+  <div class="spiritual-symbol" style="top:85%; left:4%;">❂</div>
+
+  <div class="spiritual-symbol" style="top:15%; right:5%;">✺</div>
+  <div class="spiritual-symbol" style="top:30%; right:8%;">✵</div>
+  <div class="spiritual-symbol" style="top:45%; right:3%;">✦</div>
+  <div class="spiritual-symbol" style="top:60%; right:7%;">✪</div>
+  <div class="spiritual-symbol" style="top:75%; right:4%;">⚘</div>
+  <div class="spiritual-symbol" style="top:90%; right:6%;">✤</div>
 
   <!-- Шапка -->
   <header>
@@ -149,43 +154,41 @@
     <!-- Статья 1 -->
     <div class="article">
       <h2>Масло Рика Симпсона (RSO)</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Cannabis_oil.jpg" alt="Масло Рика Симпсона">
+      <img src="https://cdn.pixabay.com/photo/2016/11/23/15/36/cannabis-1852825_1280.jpg" alt="Масло Рика Симпсона">
       <p><b>Рик Симпсон</b> — канадский активист, известный благодаря разработке метода приготовления масла каннабиса (Rick Simpson Oil, RSO).
-      Его путь начался после того, как он столкнулся с болезнью и искал альтернативные методы лечения. Масло Рика Симпсона стало символом борьбы за легализацию и признание лечебных свойств каннабиса.</p>
+      Его путь начался после того, как он столкнулся с болезнью и искал альтернативные методы лечения.</p>
       <p><b>Свойства:</b> масло обладает сильным обезболивающим, противораковым и противовоспалительным эффектом. Многие пациенты отмечают улучшение сна и снижение стресса.</p>
-      <p><b>Приготовление:</b> Рик предлагал использовать растворители для извлечения активных компонентов из шишек каннабиса, получая концентрированное тёмное масло. Сегодня существуют более безопасные способы экстракции, но принцип остаётся тем же.</p>
+      <p><b>Приготовление:</b> Рик предлагал использовать растворители для извлечения активных компонентов из шишек каннабиса, получая концентрированное тёмное масло.</p>
     </div>
 
     <!-- Статья 2 -->
     <div class="article">
       <h2>История каннабиса в культуре</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Cannabis_sativa_Koehler_drawing.jpg" alt="Cannabis sativa">
+      <img src="https://cdn.pixabay.com/photo/2017/05/01/16/25/cannabis-2274359_1280.jpg" alt="Cannabis sativa">
       <p>Каннабис использовался человечеством тысячелетиями. Его применяли в медицине, религиозных обрядах, как сырьё для тканей, бумаги и масел. 
-      В древней Индии растение считалось даром богов и помогало в духовных практиках. В Китае каннабис использовали как лекарство от множества болезней, а в Европе — для производства канатов и одежды.</p>
+      В древней Индии растение считалось даром богов и помогало в духовных практиках.</p>
     </div>
 
     <!-- Статья 3 -->
     <div class="article">
       <h2>CBD и его лечебные свойства</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/CBD_Cannabidiol.jpg" alt="CBD структура">
+      <img src="https://cdn.pixabay.com/photo/2020/08/12/15/35/cbd-oil-5486723_1280.jpg" alt="CBD масло">
       <p>Каннабидиол (CBD) — это один из основных каннабиноидов. В отличие от THC, он не вызывает психоактивного эффекта, но обладает рядом полезных свойств:
-      уменьшает тревожность, снимает воспаления, помогает при бессоннице и хронической боли. Сегодня во многих странах CBD разрешён и используется в медицинских целях.</p>
+      уменьшает тревожность, снимает воспаления, помогает при бессоннице и хронической боли.</p>
     </div>
 
     <!-- Статья 4 -->
     <div class="article">
       <h2>Научные исследования каннабиса</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Cannabis_leaf.svg" alt="Лист каннабиса">
-      <p>Современная наука активно изучает каннабис. Ученые исследуют его влияние на хронические боли, эпилепсию, депрессию и даже нейродегенеративные заболевания.
-      Результаты показывают, что многие компоненты растения обладают терапевтическим потенциалом, который может изменить будущее медицины.</p>
+      <img src="https://cdn.pixabay.com/photo/2016/04/24/22/29/marijuana-1355166_1280.jpg" alt="Лист каннабиса">
+      <p>Современная наука активно изучает каннабис. Ученые исследуют его влияние на хронические боли, эпилепсию, депрессию и даже нейродегенеративные заболевания.</p>
     </div>
 
     <!-- Статья 5 -->
     <div class="article">
       <h2>Каннабис и духовные практики</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Trichomes_on_cannabis_bud.jpg" alt="Трихомы каннабиса">
-      <p>Во многих традициях каннабис использовался для медитации, обрядов и поиска внутренней гармонии. Сегодня он помогает людям углубить осознанность,
-      отпустить напряжение и открыть новые грани своего сознания. В сочетании с правильной практикой растение становится мостом к просветлению.</p>
+      <img src="https://cdn.pixabay.com/photo/2016/11/23/14/45/cannabis-1852755_1280.jpg" alt="Духовные практики">
+      <p>Во многих традициях каннабис использовался для медитации, обрядов и поиска внутренней гармонии.</p>
     </div>
 
   </div>
@@ -195,4 +198,3 @@
   </footer>
 </body>
 </html>
-
