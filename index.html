@@ -4,17 +4,186 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Просветление — Дмитрий Сергеевич Кон</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <style>
+    /* Базовые стили */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      color: #222;
+      line-height: 1.7;
+      background: linear-gradient(to right, #1b2b1b, #f8fff0, #1b2b1b);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .header {
+      background: #228b22;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 5;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Символы */
+    .symbol {
+      position: absolute;
+      font-size: 40px;
+      opacity: 0.3;
+      animation: float 30s infinite linear;
+      z-index: 2;
+      user-select: none;
+    }
+
+    .symbol:nth-child(odd) { color: gold; }
+    .symbol:nth-child(even) { color: violet; }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-40px) rotate(180deg); }
+      100% { transform: translateY(0) rotate(360deg); }
+    }
+
+    /* Секции */
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 5;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      color: #2e7d32;
+      font-size: 2.5em;
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .about-content img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .footer {
+      background: #228b22;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* Анимация листьев */
+    .leaves {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .leaf {
+      position: absolute;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23228B22"><path d="M12 2C8 2 4 6 4 10c0 8 8 12 8 12s8-4 8-12c0-4-4-8-8-8z"/></svg>');
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+      animation: fall 10s linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-100px) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+
+    .leaf:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 15s; }
+    .leaf:nth-child(2) { left: 30%; animation-delay: 2s; animation-duration: 12s; }
+    .leaf:nth-child(3) { left: 70%; animation-delay: 4s; animation-duration: 18s; }
+    .leaf:nth-child(4) { left: 90%; animation-delay: 6s; animation-duration: 14s; }
+  </style>
+  <script>
+    // Скрипт для переключения языка
+    document.addEventListener('DOMContentLoaded', function() {
+      const langToggle = document.getElementById('lang-toggle');
+      const elements = document.querySelectorAll('[data-ru], [data-en]');
+      
+      langToggle.addEventListener('click', function() {
+        const currentLang = this.textContent;
+        const newLang = currentLang === 'EN' ? 'RU' : 'EN';
+        this.textContent = newLang === 'RU' ? 'EN' : 'RU';
+        
+        elements.forEach(element => {
+          if (newLang === 'EN' && element.dataset.en) {
+            element.textContent = element.dataset.en;
+          } else if (newLang === 'RU' && element.dataset.ru) {
+            element.textContent = element.dataset.ru;
+          }
+        });
+      });
+    });
+  </script>
 </head>
 <body>
+
+  <!-- Плавающие символы -->
+  <div class="symbol" style="top:10%; left:2%;">☯</div>
+  <div class="symbol" style="top:20%; left:5%;">ॐ</div>
+  <div class="symbol" style="top:30%; left:3%;">✿</div>
+  <div class="symbol" style="top:50%; left:7%;">✧</div>
+  <div class="symbol" style="top:70%; left:4%;">⚛</div>
+  <div class="symbol" style="top:85%; left:6%;">❂</div>
+  <div class="symbol" style="top:25%; left:1%;">♻</div>
+  <div class="symbol" style="top:65%; left:8%;">🌱</div>
+
+  <div class="symbol" style="top:15%; right:3%;">✺</div>
+  <div class="symbol" style="top:35%; right:5%;">✵</div>
+  <div class="symbol" style="top:55%; right:2%;">✦</div>
+  <div class="symbol" style="top:75%; right:6%;">✪</div>
+  <div class="symbol" style="top:90%; right:4%;">⚘</div>
+  <div class="symbol" style="top:40%; right:1%;">♻</div>
+  <div class="symbol" style="top:80%; right:8%;">🌿</div>
+
   <!-- Шапка -->
   <header class="header">
     <div class="logo">🌿 Просветление</div>
     <nav class="nav">
       <a href="#home" data-lang="ru">Главная</a>
       <a href="#about" data-lang="ru">Обо мне</a>
-      <a href="articles.html" data-lang="ru">Статьи</a> <!-- добавил -->
+      <a href="articles.html" data-lang="ru">Статьи</a>
       <a href="#contact" data-lang="ru">Контакты</a>
       <button id="lang-toggle">EN</button>
     </nav>
@@ -26,9 +195,9 @@
         data-en="The most important plant on Earth — Cannabis">
       Главное растение на планете — Каннабис
     </h1>
-    <p data-ru="Каннабис помогает раскрыть внутренний мир, обрести гармонию и новые возможности."
-       data-en="Cannabis helps to unlock the inner self, find harmony and new opportunities.">
-      Каннабис помогает раскрыть внутренний мир, обрести гармонию и новые возможности.
+    <p data-ru="Каннабис помогает раскрыть внутренний мир, обрести гармонию и новые возможности. Из него создают прочные ткани, экологичную бумагу, питательные масла и строительные материалы, открывая путь к устойчивому будущему."
+       data-en="Cannabis helps to unlock the inner self, find harmony and new opportunities. It is used to create durable fabrics, eco-friendly paper, nutritious oils and building materials, opening the way to a sustainable future.">
+      Каннабис помогает раскрыть внутренний мир, обрести гармонию и новые возможности. Из него создают прочные ткани, экологичную бумагу, питательные масла и строительные материалы, открывая путь к устойчивому будущему.
     </p>
   </section>
 
@@ -42,9 +211,9 @@
            data-en="My name is Dmitriy Sergeevich Kon. I specialize in spiritual and physical practices connected with cannabis.">
           Меня зовут Дмитрий Сергеевич Кон. Я специалист в духовных и физических практиках, связанных с каннабисом.
         </p>
-        <p data-ru="Моя цель — помочь людям познать себя и открыть новые возможности через осознанное взаимодействие с этим растением."
-           data-en="My mission is to help people discover themselves and unlock new possibilities through conscious connection with this plant.">
-          Моя цель — помочь людям познать себя и открыть новые возможности через осознанное взаимодействие с этим растением.
+        <p data-ru="Моя цель — помочь людям познать себя и открыть новые возможности через осознанное взаимодействие с этим растением. Мы стремимся узнать о каннабисе как можно больше, чтобы раскрыть его целебный потенциал и спасти миллионы людей."
+           data-en="My mission is to help people discover themselves and unlock new possibilities through conscious connection with this plant. We strive to learn as much as possible about cannabis to unlock its healing potential and save millions of people.">
+          Моя цель — помочь людям познать себя и открыть новые возможности через осознанное взаимодействие с этим растением. Мы стремимся узнать о каннабисе как можно больше, чтобы раскрыть его целебный потенциал и спасти миллионы людей.
         </p>
       </div>
     </div>
